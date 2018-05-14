@@ -49,6 +49,9 @@ RUN printf "\
     filetype plugin indent on\n\
     syntax off\n\
     " > ~/.vimrc
+    
+RUN apt-get install --fix-missing -y \
+    clang-3.8
 
 CMD bash
 
