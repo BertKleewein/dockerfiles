@@ -40,5 +40,15 @@ RUN pip3 install --upgrade pip
 RUN echo alias ls=ls >> /root/.bash_aliases
 RUN chmod +777 /root/.bash_aliases
 
+RUN printf "\
+    set tabstop=4\n\
+    set softtabstop=4\n\
+    set expandtab\n\
+    set showmatch\n\
+    set shiftwidth=4\n\
+    filetype plugin indent on\n\
+    syntax off\n\
+    " > ~/.vimrc
+
 CMD bash
 
