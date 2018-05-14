@@ -51,7 +51,9 @@ RUN printf "\
     " > ~/.vimrc
     
 RUN apt-get install --fix-missing -y \
-    clang-3.8
+    llvm \
+    clang-3.8 \
+    clang
 
 CMD bash
 
